@@ -1,0 +1,68 @@
+/* Estilos para la sección Hero */
+#home {
+    height: 100vh; /* Ocupa el 100% del alto de la pantalla */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-image img {
+    width: 80%;   /* Cumplimos con el requisito del 80% de ancho */
+    height: 80vh;  /* Y el 80% de alto aproximadamente */
+    object-fit: cover; /* Para que la imagen no se deforme */
+}
+
+/* Configuración General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Luego usaremos Google Fonts como pide el TP [cite: 22] */
+}
+
+/* Header Negro y Elegante */
+header {
+    background-color: #1a1a1a;
+    padding: 10px 5%; /* 5% de espacio a los lados para que no toque los bordes */
+    display: flex;
+    justify-content: space-between; /* Empuja el logo a la izq y los iconos a la der */
+    align-items: center; /* Centra todo verticalmente */
+    width: 100%;
+}
+
+.logo img {
+    height: 60px; /* Controlamos el tamaño del logo */
+    width: auto;  /* Mantiene la proporción para que no se estire */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px; /* Espacio entre los enlaces */
+}
+
+/* Estilo de los enlaces */
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: 0.3s; /* Agregamos esto para que el cambio a dorado sea suave */
+}
+
+nav ul li a:hover {
+    color: #c5a36c;
+}
+
+.header-icons {
+    display: flex;
+    gap: 15px;
+    font-size: 1.2rem;
+    color: rgb(197, 163, 108);
+}
