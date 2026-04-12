@@ -1,17 +1,25 @@
-/* Estilos para la sección Hero */
+/* Estilos para la sección Hero (Carrusel) */
 #home {
-    height: 100vh; /* Ocupa el 100% del alto de la pantalla */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    width: 100%;
+    overflow: hidden;
+    background-color: #000; /* Fondo negro por si la imagen tarda en cargar */
 }
 
-.hero-image img {
-    width: 80%;   /* Cumplimos con el requisito del 80% de ancho */
-    height: 80vh;  /* Y el 80% de alto aproximadamente */
-    object-fit: cover; /* Para que la imagen no se deforme */
+/* Reemplazamos .hero-image img por .banner-img */
+.banner-img {
+    width: 100vw;      /* Ancho total de pantalla */
+    height: 85vh;      /* 85% del alto de la pantalla [Requisito TP] */
+    object-fit: cover; /* Mantiene la proporción sin deformar */
+    display: block;
+}
+
+/* Ajuste para los puntitos (indicadores) */
+.carousel-indicators [data-bs-target] {
+    background-color: #c5a36c !important; /* Forzamos tu dorado */
+    width: 12px;
+    height: 12px;
+    border-radius: 50%; /* Los hace redondos */
+    margin: 0 10px;
 }
 
 /* Configuración General */
@@ -22,28 +30,35 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif; /* Luego usaremos Google Fonts como pide el TP [cite: 22] */
+    background-color: #1a1a1a; /* Esto ayuda a que si hay un micro-espacio, sea negro */
 }
 
 /* Header Negro y Elegante */
 header {
     background-color: #1a1a1a;
-    padding: 10px 5%; /* 5% de espacio a los lados para que no toque los bordes */
+    padding: 5px 40px;
     display: flex;
     justify-content: space-between; /* Empuja el logo a la izq y los iconos a la der */
     align-items: center; /* Centra todo verticalmente */
     width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    min-height: 60px;
 }
 
 .logo img {
     height: 60px; /* Controlamos el tamaño del logo */
-    width: auto;  /* Mantiene la proporción para que no se estire */
+    width: auto;
+    display: block;  /* Mantiene la proporción para que no se estire */
 }
 
 nav ul {
     display: flex;
     list-style: none;
-    gap: 20px; /* Espacio entre los enlaces */
+    gap: 30px; /* Espacio entre los enlaces */
+    margin: 0;
+    padding: 0;
 }
 
 /* Estilo de los enlaces */

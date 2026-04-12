@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jolie | Tienda Online</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
 <header>
     <div class="logo">
         <a href="index.html">
@@ -24,22 +26,38 @@
         </ul>
     </nav>
     <div class="header-icons">
-        <i class="fa-solid fa-user" style="color: rgb(197, 163, 108);"></i>
-        <i class="fa-solid fa-cart-shopping" style="color: rgb(197, 163, 108);"></i>
+        <a href="contacto.html" style="color: inherit; text-decoration: none;">
+        <i class="fa-solid fa-user"></i>
+        </a>
+        <i class="fa-solid fa-cart-shopping"></i>
     </div>
 </header>
+
 <main>
     <section id="home">
-        <h1>Bienvenidos a Jolie</h1>
-        <p>Encuentra la elegancia en cada detalle.</p>
-        <div class="hero-image">
-            <img src="img/banner-home.jpg" alt="Imagen principal de Jolie">
+        <div id="jolieCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="15000">
+            
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#jolieCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#jolieCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/banner-home.jpg" class="d-block w-100 banner-img" alt="Nueva Colección Jolie">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/otoño2.jpg" class="d-block w-100 banner-img" alt="Tendencias de Temporada">
+                </div>
+            </div>
         </div>
     </section>
-    </main>
+</main>
 <footer>
     <p>&copy; 2026 Jolie. Todos los derechos reservados.</p>
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
 
