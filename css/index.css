@@ -4,11 +4,13 @@
     box-sizing: border-box;
 }
 
+/* Estilos generales */
 body { 
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #cfc5b7;
 }
 
 header {
@@ -16,13 +18,13 @@ header {
     padding: 1rem 2rem;
 }
 
-
 header nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+/* Logo e íconos */
 .logo{
     width: 150px;
 }
@@ -68,6 +70,7 @@ nav ul li a:hover {
     color: rgb(197, 163, 108);
 }
 
+/* Carousel */
 #carouselExampleCaptions {
     max-width: 100%;
 }
@@ -127,6 +130,8 @@ nav ul li a:hover {
     transform:scale(1.2)
 }
 
+/* Acceso rápido */
+
 .acceso-rapido {
     display: flex;
     gap: 1rem;
@@ -138,7 +143,7 @@ nav ul li a:hover {
     align-items: center;
 }
 
-.acceso-rapido div {
+.image-container {
     flex: 1;
     min-width: 0;
     border-radius: 12px;
@@ -146,20 +151,64 @@ nav ul li a:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     height: 320px;
+    position: relative;
 }
 
-.acceso-rapido div:hover {
+.image-container:hover {
     transform: translateY(-8px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
-.acceso-rapido img {
+.image-container img {
     width: 100%;
     height: 100%;
     display: block;
     object-fit: cover;
     object-position: center;
-    max-height: 350px;
+    max-height: 390px;
+    transition: transform 0.3s ease;
+}
+
+.image-container:hover img {
+    transform: scale(1.1);
+}
+
+/* Texto sobre la imagen */
+.image-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(245, 235, 220, 0.90);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+}
+
+.image-text h2 {
+    font-size: 4rem;
+    color: #8a6f25;
+    margin: 0;
+    font-weight: 900;
+    font-family: 'Playfair Display', serif;
+}
+
+.image-text p {
+    font-size: 3rem;
+    color: #1a1a1a;
+    margin: 12px 0 0 0;
+    font-weight: 800;
+    font-family: fantasy;
+}
+
+.image-container:hover .image-text {
+    opacity: 1;
 }
 
 @media (max-width: 768px) {
@@ -169,11 +218,13 @@ nav ul li a:hover {
         padding: 1.5rem;
     }
     
-    .acceso-rapido div {
+    .image-container {
         flex: none;
         width: 100%;
     }
 }
+
+/* Tendencia 2026 */
 
 h2 {
     text-align: center;
@@ -216,11 +267,11 @@ margin-top: 0 !important;
 .product-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    gap: 4rem;
 }
 
 .product-card img {
-    height: 250px; 
+    height: 280px; 
     object-fit: cover;
     object-position: center;
 }
@@ -230,7 +281,16 @@ margin-top: 0 !important;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ccb9ab;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer */
 
 footer {
     background-color: #1a1a1a;
