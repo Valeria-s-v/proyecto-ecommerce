@@ -40,6 +40,7 @@ header nav{
     align-items: center;
 }
 
+/* Navegación */
 header nav ul, footer ul {
     margin-bottom: 0 !important;
     padding-left: 0 !important;
@@ -130,7 +131,7 @@ nav ul li a:hover {
     transform:scale(1.2)
 }
 
-/* Acceso rápido */
+/* Acceso rápido (tendencia 2026) */
 
 .acceso-rapido {
     display: flex;
@@ -143,6 +144,7 @@ nav ul li a:hover {
     align-items: center;
 }
 
+/* Tarjetas de imagen */
 .image-container {
     flex: 1;
     min-width: 0;
@@ -211,6 +213,7 @@ nav ul li a:hover {
     opacity: 1;
 }
 
+/* Responsividad */
 @media (max-width: 768px) {
     .acceso-rapido {
         flex-direction: column;
@@ -224,7 +227,7 @@ nav ul li a:hover {
     }
 }
 
-/* Tendencia 2026 */
+/* Letras de Tendencia 2026 */
 
 h2 {
     text-align: center;
@@ -258,6 +261,7 @@ text-align: center;
 margin-top: 0 !important;
 }
 
+/* Sección de razones para comprar en nuestra tienda */
 .reasons-section {
     max-width: 1200px;
     margin: 1rem auto;

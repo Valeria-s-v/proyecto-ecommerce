@@ -1,3 +1,4 @@
+/* Estilos para el catálogo de productos */
 body { 
     min-height: 100vh;
     display: flex;
@@ -33,6 +34,7 @@ body::after {
     z-index: 1;
 }
 
+/* Estilos para el catálogo de productos */
 main.catalogo {
     background-color: transparent;
     position: relative;
